@@ -1,5 +1,5 @@
 <?php 
-$dsn = "mysql:host=localhost;dbname=coursephp" ; 
+$dsn = "mysql:host=localhost;dbname=noteapp" ; 
 $user = "root" ;
 $pass = "" ; 
 $option = array(
@@ -9,7 +9,8 @@ try {
 
     $con = new PDO($dsn , $user , $pass , $option ); 
     $con->setAttribute(PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION) ;
-    
+    include "functions.php";
+
 }catch(PDOException $e){
   echo $e->getMessage() ;        
 }
